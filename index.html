@@ -1,11 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Dien Le's Visualisations</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  
 </head>
+
 <body>
-    
+  
+  <div class="page">
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-1-1">
+        <h1>Travelling to Australia: Insights</h1>
+        <p>Using data from the ABS, this project visualises where overseas visitors travel, which countries they come from,
+          and their main reasons for visiting through a range of Vega-Lite maps and charts
+        </p>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+      
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id="vis1" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+          <h2>Total Arrivals in each State</h2>
+          <p>
+          Since 1991, tourism arrivals have grown dramatically across all Australian states and territories. 
+          Every region now receives far more visitors than three decades ago. 
+          <strong>Victoria</strong> shows the biggest jump with growth over <strong>540%</strong>, 
+          followed by <strong>Western Australia</strong> (<strong>445%</strong>) and <strong>Tasmania</strong> (<strong>377%</strong>). 
+          Even the slowest growth, in the <strong>Northern Territory</strong> (<strong>225%</strong>), means arrivals more than tripled. 
+          Nationally, total arrivals have climbed from about <strong>884,000</strong> in 1991 to over <strong>21 million</strong> in 2025, roughly a fourfold increase. 
+          This strong, consistent upward trend highlights how tourism has become a major part of Australia’s economy and identity.
+          </p>
+          </div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+
+      
+      <!-- pure grid group -->
+       <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id="vis2" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+          <h2>Who visit Australia the most?</h2>
+          <p>
+          The chart shows the <strong>top 15 countries by total arrivals</strong> to Australia. 
+          <strong>New Zealand</strong> leads by a large margin, contributing nearly <strong>18.7%</strong> of all international visitors,
+          almost one in five arrivals. The <strong>United Kingdom</strong> follows at <strong>12.2%</strong>, 
+          reflecting strong historical and cultural ties. <strong>China</strong> (8.7%) and <strong>Japan</strong> (8.2%) are major Asian sources of visitors, 
+          while the <strong>United States</strong> (7.2%) rounds out the top five. 
+          Overall, the data highlights that Australia’s tourism is dominated by regional neighbours and English-speaking countries, 
+          which shape Australia’s visitor base.
+          </p>
+          </div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+
+      
+      <!-- pure grid group -->
+        <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id="vis3" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+          <h2>Has tourism recover after Covid?</h2>
+          <p>
+          The chart shows how <strong>total visitor arrivals in Australia</strong> changed from <strong>2015 to 2025</strong>. 
+          Visitor numbers were stable before 2020, averaging around <strong>1.5 to 2 million</strong> per month. 
+          However, after <strong>COVID-19 restrictions began in March 2020</strong>, arrivals collapsed almost to zero — the sharpest drop in modern tourism history. 
+          It took until <strong>late 2022</strong> for visitor numbers to begin a steady recovery, and by <strong>2024–2025</strong> arrivals had largely returned to pre-pandemic levels. 
+          This pattern clearly highlights the severe but temporary impact of the pandemic on Australia’s tourism industry.
+          </p>
+          </div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+
+      
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id="vis4" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+          <h2>Main reasons of short-term visitors</h2>
+          <p>
+          The chart shows how <strong>visitor arrivals by purpose</strong> changed from <strong>2015 onwards</strong>. 
+          Before 2020, <strong>holidays</strong> and <strong>visiting friends or relatives</strong> were the most common reasons for travel. 
+          When <strong>COVID-19 restrictions</strong> began, all categories dropped sharply, especially holiday travel, which nearly disappeared for almost two years. 
+          Arrivals for <strong>education</strong> and <strong>employment</strong> also fell but started recovering earlier as borders reopened for students and workers. 
+          By 2023–2025, most travel purposes had rebounded, though leisure travel remained below pre-pandemic highs. 
+          This pattern highlights how different types of travel were affected and recovered at different speeds after the pandemic.
+          </p>
+
+          </div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+
+      
+      <!-- pure grid group -->
+       <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id="vis5" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+          <h2>When do most people visit Australia?</h2>
+          <p>
+          This chart compares <strong>monthly visitor patterns from 2015 to 2024</strong>, revealing clear seasonal trends in Australia’s tourism. 
+          Visitor numbers peak sharply in the <strong>summer months of December, January, and February</strong>, 
+          reflecting holiday travel and warm weather attractions. 
+          Mid-year months such as <strong>May to September</strong> typically record fewer arrivals, forming the tourism off-season. 
+          Despite year-to-year fluctuations, this recurring pattern shows that Australia’s tourism demand is strongly shaped by seasonal preferences, 
+          with the top three months being <strong>December</strong>, <strong>January</strong>, and <strong>February</strong>.
+          </p>
+          </div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+
+      
+      <!-- pure grid group -->
+        <div class="pure-g">
+        <div class="pure-u-2-3">
+            <div id="vis6" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-right">
+          <h2>How long do short-term visitors stay in Australia?</h2>
+          <p>
+          This chart shows the <strong>share of visitors by length of stay in Australia</strong> from <strong>2015 to 2025</strong>. 
+          Before 2020, most visitors stayed for <strong>less than one month</strong>, with short-term trips under <strong>two weeks</strong> making up the largest share. 
+          During the <strong>COVID-19 period (2020–2021)</strong>, the pattern shifted dramatically — long stays of <strong>over six months</strong> suddenly became dominant, 
+          as border closures limited short visits and only long-term visa holders or residents could remain in the country. 
+          After 2022, short-term travel gradually recovered, and by 2024–2025 the visitor mix had largely returned to its pre-pandemic structure. 
+          Overall, the data highlights how the pandemic temporarily reversed Australia’s usual pattern of short holiday stays.
+          </p>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+
+    <div class="pure-g">
+  <div class="pure-u-1-1 small-font">
+    <p>
+      This visualisation is created by Hung Dien Le. 
+      The datasource is 
+      <a href="https://www.abs.gov.au/statistics/industry/tourism-and-transport/overseas-arrivals-and-departures-australia/aug-2025" target="_blank">
+        https://www.abs.gov.au
+      </a>.
+    </p>
+  </div>
+</div>
+
+
+  </div>
+
+  <script type="text/javascript">
+        var specVis1 = "js/viz1_arrivals_state.json";
+        vegaEmbed('#vis1', specVis1);
+
+        var specVis2 = "js/viz2_countries_visit.json";
+        vegaEmbed('#vis2', specVis2);
+
+        var specVis3 = "js/viz3_tourism_recover.json";
+        vegaEmbed('#vis3', specVis3);
+
+        var specVis4 = "js/viz4_reasons_visit.json";
+        vegaEmbed('#vis4', specVis4);
+
+        var specVis5 = "js/viz5_when_visit.json";
+        vegaEmbed('#vis5', specVis5);
+
+        var specVis6 = "js/viz6_length_stay.json";
+        vegaEmbed('#vis6', specVis6);
+
+        print(brush)
+    </script>
 </body>
 </html>
